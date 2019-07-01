@@ -2,11 +2,20 @@
   color: #F280A1;
   font-size: 23px;
 }
-/*
-#bootstrap-overrides #hej {
-  width: 100%;
+
+#bootstrap-overrides td a {
+   display: block;
+   padding-left: 10px;
+   color:#000000;
+   text-decoration: none;
 }
 
+#bootstrap-overrides td {
+   padding-left: 0;
+   padding-right: 0;
+}
+
+/*
 #bootstrap-overrides .form-group {
   width: 70%;
 }
