@@ -50,13 +50,27 @@
         </div>
       </div>
     </nav>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
 
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+    https://firebase.google.com/docs/web/setup#available-libraries -->
 
-
-
-
-
-
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyAAfWDrsqk3r2VQo-xD99c93Rwi4EHLJ8g",
+        authDomain: "dpong-d23d0.firebaseapp.com",
+        databaseURL: "https://dpong-d23d0.firebaseio.com",
+        projectId: "dpong-d23d0",
+        storageBucket: "dpong-d23d0.appspot.com",
+        messagingSenderId: "998832556161",
+        appId: "1:998832556161:web:f8b3db8d85e6b173e82580"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
+    <script src="main.js"></script>
 
 
 
