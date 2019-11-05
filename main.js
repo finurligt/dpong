@@ -1,24 +1,34 @@
-var table = document.getElementById('playertable')
+function setUp() {
 
-var array = [["1","Fabbe","1337"],["2","hurdur","1000"]];
-
-/*
-for (var i = 0; i < array.length; i++) {
-  for (var j = 0; j < array[0].length; j++) {
-    var a = document.createElement('a');
-    a.title = array[i][j];
-    table.rows[i+1].cells[j] = a;
-  }
+  document.getElementById('logout-a').addEventListener("click", function(event) {
+    event.preventDefault();
+  })
 }
-*/
 
-var myTr = document.createElement('tr');
-var myA = document.createElement('a');
-var myTd = document.createElement('td');
-var linkText = document.createTextNode("helloworld");
-myA.appendChild(linkText);
-myA.href="https://www.example.com/"
-myTd.appendChild(myA);
-myTd.className = "tableElement";
-myTr.appendChild(myA);
-table.appendChild(myTr);
+setUp();
+
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    console.log(user + " just signed in.")
+    document.getElementById('nav-logout-ul').style.display="block";
+    document.getElementById('nav-login-ul').style.display="none";
+    //show log out button
+  } else {
+    console.log(user + " just signed out.")
+    document.getElementById('nav-login-ul').style.display="block";
+    document.getElementById('nav-logout-ul').style.display="none";
+    //no user signed
+  }
+});
+
+
+
+function logOut() {
+  console.log("logging out")
+  firebase.auth().signOut().then(function() {
+    // Sign-out successful.
+  }, function(error) {
+    console.log("Error while signing out.")
+    console.log(error)
+  });
+}

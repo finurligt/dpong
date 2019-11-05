@@ -43,9 +43,12 @@
             </div>
             <button type="submit" class="btn btn-default">Submit</button>
           </form>
-          <ul class="nav navbar-nav navbar-right">
+          <ul id="nav-login-ul" class="nav navbar-nav navbar-right">
             <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
             <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+          </ul>
+          <ul id="nav-logout-ul" class="nav navbar-nav navbar-right">
+            <li><a id="logout-a" onclick="logOut()"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
           </ul>
         </div>
       </div>
@@ -63,142 +66,8 @@
           <th scope="col">Points</th>
         </tr>
       </thead>
-      <tbody>
-        <tr>
-          <td>asdasd</td>
-          <td>asdasdasd</td>
-          <td>awfgdgsef</td>
-        </tr>
-        <tr>
-          <td><a href="#">2</a></td>
-          <td><a href="#">Jacob</a></td>
-          <td><a href="#">1234</a></td>
-        </tr>
-        <tr>
-          <td><a href="#">3</a></td>
-          <td><a href="#">Larry</a></td>
-          <td><a href="#">1111</a></td>
-        </tr>
-        <tr>
-          <td><a href="#">3</a></td>
-          <td><a href="#">Larry</a></td>
-          <td><a href="#">1111</a></td>
-        </tr>
-        <tr>
-          <td><a href="#">3</a></td>
-          <td><a href="#">Larry</a></td>
-          <td><a href="#">1111</a></td>
-        </tr>
-        <tr>
-          <td><a href="#">3</a></td>
-          <td><a href="#">Larry</a></td>
-          <td><a href="#">1111</a></td>
-        </tr>
-        <tr>
-          <td><a href="#">3</a></td>
-          <td><a href="#">Larry</a></td>
-          <td><a href="#">1111</a></td>
-        </tr>
-        <tr>
-          <td><a href="#">3</a></td>
-          <td><a href="#">Larry</a></td>
-          <td><a href="#">1111</a></td>
-        </tr>
-        <tr>
-          <td><a href="#">3</a></td>
-          <td><a href="#">Larry</a></td>
-          <td><a href="#">1111</a></td>
-        </tr>
-        <tr>
-          <td><a href="#">3</a></td>
-          <td><a href="#">Larry</a></td>
-          <td><a href="#">1111</a></td>
-        </tr>
-        <tr>
-          <td><a href="#">3</a></td>
-          <td><a href="#">Larry</a></td>
-          <td><a href="#">1111</a></td>
-        </tr>
-        <tr>
-          <td><a href="#">3</a></td>
-          <td><a href="#">Larry</a></td>
-          <td><a href="#">1111</a></td>
-        </tr>
-        <tr>
-          <td><a href="#">3</a></td>
-          <td><a href="#">Larry</a></td>
-          <td><a href="#">1111</a></td>
-        </tr>
-        <tr>
-          <td><a href="#">3</a></td>
-          <td><a href="#">Larry</a></td>
-          <td><a href="#">1111</a></td>
-        </tr>
-        <tr>
-          <td><a href="#">3</a></td>
-          <td><a href="#">Larry</a></td>
-          <td><a href="#">1111</a></td>
-        </tr>
-        <tr>
-          <td><a href="#">3</a></td>
-          <td><a href="#">Larry</a></td>
-          <td><a href="#">1111</a></td>
-        </tr>
-        <tr>
-          <td><a href="#">3</a></td>
-          <td><a href="#">Larry</a></td>
-          <td><a href="#">1111</a></td>
-        </tr>
-        <tr>
-          <td><a href="#">3</a></td>
-          <td><a href="#">Larry</a></td>
-          <td><a href="#">1111</a></td>
-        </tr>
-        <tr>
-          <td><a href="#">3</a></td>
-          <td><a href="#">Larry</a></td>
-          <td><a href="#">1111</a></td>
-        </tr>
-        <tr>
-          <td><a href="#">3</a></td>
-          <td><a href="#">Larry</a></td>
-          <td><a href="#">1111</a></td>
-        </tr>
-        <tr>
-          <td><a href="#">3</a></td>
-          <td><a href="#">Larry</a></td>
-          <td><a href="#">1111</a></td>
-        </tr>
-        <tr>
-          <td><a href="#">3</a></td>
-          <td><a href="#">Larry</a></td>
-          <td><a href="#">1111</a></td>
-        </tr>
-        <tr>
-          <td><a href="#">3</a></td>
-          <td><a href="#">Larry</a></td>
-          <td><a href="#">1111</a></td>
-        </tr>
-        <tr>
-          <td><a href="#">3</a></td>
-          <td><a href="#">Larry</a></td>
-          <td><a href="#">1111</a></td>
-        </tr>
-        <tr>
-          <td><a href="#">3</a></td>
-          <td><a href="#">Larry</a></td>
-          <td><a href="#">1111</a></td>
-        </tr>
-        <tr>
-          <td><a href="#">3</a></td>
-          <td><a href="#">Larry</a></td>
-          <td><a href="#">1111</a></td>
-        </tr>
-        <tr>
-          <td><a href="#">3</a></td>
-          <td><a href="#">Larry</a></td>
-          <td><a href="#">1111</a></td>
-        </tr>
+      <tbody id="tableBody">
+
       </tbody>
     </table>
 
@@ -207,7 +76,7 @@
     <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
 
     <!-- TODO: Add SDKs for Firebase products that you want to use
-    https://firebase.google.com/docs/web/setup#available-libraries -->
+         https://firebase.google.com/docs/web/setup#available-libraries -->
 
     <script>
       // Your web app's Firebase configuration
@@ -223,7 +92,9 @@
       // Initialize Firebase
       firebase.initializeApp(firebaseConfig);
     </script>
+    <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-auth.js"></script>
+    <script src="index.js"></script>
     <script src="main.js"></script>
-
   </body>
 </html>
