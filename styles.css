@@ -15,12 +15,6 @@
    padding-right: 0;
 }
 
-/*
-#bootstrap-overrides .form-group {
-  width: 70%;
+#bootstrap-overrides .login-input {
+  margin-bottom: 5px;
 }
-
-#bootstrap-overrides .form-control {
-  width: 100%;
-}
-*/
