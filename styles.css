@@ -18,3 +18,11 @@
 #bootstrap-overrides .login-input {
   margin-bottom: 5px;
 }
+
+#nav-login-ul {
+  display: none;
+}
+
+#nav-logout-ul {
+  display: none;
+}
