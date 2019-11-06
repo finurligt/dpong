@@ -1,6 +1,14 @@
 var submitGame = firebase.functions().httpsCallable('submitGame');
-submitGame({text: "doesnt matter"}).then(function(result) {
-  // Read result of the Cloud Function.
-  var sanitizedMessage = result.data.text;
-  // ...
-});
+
+
+function exampleCall() {
+  /**
+  Use this function to submit a game. If more fields are needed just add them
+  and I will fix backend later.
+  **/
+  submitGame({
+    winner: "hello",
+    loser: "nooo"
+  });
+  console.log("submitGame function called");
+}
