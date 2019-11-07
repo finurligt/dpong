@@ -7,8 +7,9 @@ function exampleCall() {
   and I will fix backend later.
   **/
   submitGame({
-    winner: "hello",
-    loser: "nooo"
+    winners: ["winner1","winner2"],
+    losers: ["loser1","loser2"]
   });
   console.log("submitGame function called");
 }
+exampleCall();
