@@ -26,15 +26,15 @@
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav">
             <li class="active"><a href="#">Home</a></li>
-            <li class="dropdown">
+            <!--li class="dropdown">
               <a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="#">Page 1-1</a></li>
                 <li><a href="#">Page 1-2</a></li>
                 <li><a href="#">Page 1-3</a></li>
               </ul>
-            </li>
-            <li><a href="#">Page 2</a></li>
+            </li-->
+            <li><a href="submit.html">Submit game</a></li>
             <li><a href="#">Page 3</a></li>
           </ul>
           <form id="hej" class="navbar-form navbar-left" action="/action_page.php">
@@ -54,7 +54,15 @@
       </div>
     </nav>
 
-
+    <div class="col-sm-4 col-sm-offset-4">
+      <h2 class="text-center">Submit game</h2>
+      <h3>Winners</h3>
+      <input class="form-control" type="text" placeholder="Winners">
+      <h3>Losers</h3>
+      <input class="form-control" type="text" placeholder="Losers">
+      <button id="submit-game-button" type="submit" class="btn btn-default">Submit</button>
+      <h5 id="submit-game-description">Players can be separated with a comma. Example: "Player1, player2"</h5>
+    </div>
 
 
 

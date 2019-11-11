@@ -77,3 +77,13 @@ input[type=submit] {
   background-color: DodgerBlue !important;
   color: #ffffff;
 }
+
+#submit-game-button {
+  margin-top: 16px;
+  display: inline-block;
+  float: right;
+}
+
+#submit-game-description {
+  margin-top: 16px;
+}
