@@ -6,6 +6,8 @@
 - ~~Backend: Make submitGame() update player rating.~~
 - Backend: Connect login data to username data (Or should we?)
 - Backend: Fix access rules
-- Make register account page and functionality (should also add data to database, backend?)
+- Design: Make register account page
+- register account functionality (should also add data to database, backend?)
 - ~~Add submit game functionality~~
 - Submit game bad user input handling
+- Design: User profile page
