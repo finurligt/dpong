@@ -8,3 +8,4 @@
 - Backend: Fix access rules
 - Make register account page and functionality (should also add data to database, backend?)
 - ~~Add submit game functionality~~
+- Submit game bad user input handling
