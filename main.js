@@ -12,6 +12,7 @@ setUp();
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     console.log(user + " just signed in.")
+    console.log(user);
     document.getElementById('nav-logout-ul').style.display="block";
     document.getElementById('nav-login-ul').style.display="none";
     //show log out button

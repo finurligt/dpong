@@ -11,6 +11,7 @@ firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     window.location.href = 'index.html';
     console.log(user + " just signed in.")
+    console.log(JSON.parse(user));
     //show log out button
   } else {
     //no user signed
