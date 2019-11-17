@@ -12,3 +12,4 @@
 - Submit game bad user input handling
 - Design: User profile page (https://dribbble.com/shots/3311782-Dark-Gamer-Profile-Design)
 - Look at caching players locally to save downloaded data (currently loading from main.js)
+- Fix url variables for profile pages
