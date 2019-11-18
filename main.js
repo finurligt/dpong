@@ -4,10 +4,18 @@ function setUp() {
     event.preventDefault();
   })
 
+  document.getElementById('search-button').addEventListener("click", function(event) {
+    event.preventDefault();
+  })
+
   setUpAutocomplete();
 }
 
 setUp();
+
+function search() {
+  window.location.href = 'profile.html?id=' + document.getElementById('search-input').value;
+}
 
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {

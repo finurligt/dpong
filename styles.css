@@ -88,8 +88,27 @@ input[type=submit] {
   margin-top: 16px;
 }
 
-#bootstrap-overrides .profile {
+#profile {
   border-left: 1px solid #A9A9A9;
   border-right: 1px solid #A9A9A9;
   min-height: 400px;
+  display: none;
+}
+
+#user-not-found {
+  display: none;
+}
+
+#rating-div {
+  margin-bottom: 20px;
+}
+
+#name {
+  margin-top: 40px;
+}
+
+@media (max-width:767px) {
+  #profile{
+    border:0px solid !important
+  }
 }
