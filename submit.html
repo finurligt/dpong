@@ -25,7 +25,7 @@
 
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
+            <li class="active"><a href="index.html">Home</a></li>
             <li class="dropdown">
               <a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
               <ul class="dropdown-menu">
@@ -42,7 +42,7 @@
             <div class="form-group autocomplete">
               <input id='search-input' type="text" class="form-control basicAutoComplete" placeholder="Search" autocomplete="off">
             </div>
-            <button type="submit" class="btn btn-default">Submit</button>
+            <button id="search-button" class="btn btn-default" onclick="search()">Submit</button>
 
 
           </form>
@@ -56,6 +56,7 @@
         </div>
       </div>
     </nav>
+
 
     <div class="col-sm-4 col-sm-offset-4">
       <h2 class="text-center">Submit game</h2>
