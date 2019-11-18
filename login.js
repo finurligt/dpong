@@ -1,3 +1,5 @@
+var registerUser = firebase.functions().httpsCallable('registerUser');
+
 const registerForm = document.getElementById("register-form");
 const loginForm = document.getElementById("login-form");
 
@@ -34,4 +36,10 @@ function login() {
 
 document.getElementById('login-button').addEventListener("click", function(event) {
   event.preventDefault();
+})
+
+registerUser({
+  email: "example2@example.com",
+  password: "abc123",
+  displayName: "helst inte"
 })
