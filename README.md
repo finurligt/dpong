@@ -2,7 +2,9 @@
 
 ###### TODO:
 
-- Critical: Submit game bad user input handling
+- Critical: Cloud functions bad user input handling
+- Critical: Clientside bad input handling
+- Critical: User feedback for login, register and submit
 - Critical, backend: Fix access rules
 - Critical, design: Make register account page
 - Critical: register account functionality (should also add data to database, backend?)
