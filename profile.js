@@ -62,7 +62,7 @@ function fillTable(data) {
   const tableBody = document.getElementById('tableBody');
   let dataHtml = '';
   gamesArray.forEach(function(child) {
-    dataHtml += `<tr><td><a href="#">${child.winners}</a></td><td><a href="#">${child.losers}</a></td><td><a href="#">${child.rating}</a></td><td><a href="#">${formatDate(new Date(child.timestamp))}</a></td></tr>`
+    dataHtml += `<tr><td><a href="#">${child.winners.join(", ")}</a></td><td><a href="#">${child.losers.join(", ")}</a></td><td><a href="#">${child.rating}</a></td><td><a href="#">${formatDate(new Date(child.timestamp))}</a></td></tr>`
   });
 
   tableBody.innerHTML = dataHtml;
