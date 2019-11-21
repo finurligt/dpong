@@ -14,6 +14,7 @@ firebase.auth().onAuthStateChanged(function(user) {
     //show log out button
   } else {
     //no user signed
+    document.getElementById('login-li').classList.add("active");
     loginForm.style.display="block";
   }
 });
