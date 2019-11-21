@@ -107,6 +107,10 @@ input[type=submit] {
   margin-top: 40px;
 }
 
+#bootstrap-overrides .register-form {
+  display: none;
+}
+
 @media (max-width:767px) {
   #profile{
     border:0px solid !important

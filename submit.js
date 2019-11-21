@@ -11,6 +11,11 @@ function submitButton() {
   submitGame({
     winners: winnersArray,
     losers: loserArray
-  });
-  console.log("submitGame function called");
+  }).then(function(submitReturn) {
+    if (submitReturn.data.result=="success") {
+      console.log(submitReturn.data.result);
+    } else {
+      window.alert(submitReturn.data.result);
+    }
+  })
 }
