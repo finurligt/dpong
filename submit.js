@@ -1,5 +1,3 @@
-document.getElementById('register-li').classList.add("active");
-
 var submitGame = firebase.functions().httpsCallable('submitGame');
 
 document.getElementById('submit-li').classList.add("active");
