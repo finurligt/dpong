@@ -61,10 +61,15 @@
 
     <div class="col-sm-4 col-sm-offset-4">
       <form id="register-form" class="register-form" action="index.html" method="post">
-        <input id="username" class="login-input form-control" type="username" placeholder="Username">
         <input id="email" class="login-input form-control" type="email" placeholder="Email">
         <input id="password" class="login-input form-control" type="password" placeholder="Password">
-        <button id="register-button" type="button" onclick="localRegisterUser()" class="btn btn-default">Register</button>
+        <button id="register-button" type="button" onclick="registerUser()" class="btn btn-default">Register</button>
+      </form>
+
+      <form id="username-form" class="register-form" action="index.html" method="post">
+        <h3>Select Username</h3>
+        <input id="username" class="login-input form-control" type="username" placeholder="Username">
+        <button id="username-button" type="button" onclick="selectUsernameHelp()" class="btn btn-default">Register</button>
       </form>
 
     </div>
