@@ -1,5 +1,7 @@
 var submitGame = firebase.functions().httpsCallable('submitGame');
 
+document.getElementById('submit-li').classList.add("active");
+
 
 function submitButton() {
   /**
@@ -14,6 +16,7 @@ function submitButton() {
   }).then(function(submitReturn) {
     if (submitReturn.data.result=="success") {
       console.log(submitReturn.data.result);
+      window.location.href = 'index.html';
     } else {
       window.alert(submitReturn.data.result);
     }
