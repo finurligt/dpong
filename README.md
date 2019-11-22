@@ -8,7 +8,7 @@
 - Backend, refactor: Connect uid to username and check if user is in game at submitGame()
 - Look at caching players locally to save downloaded data (currently loading from main.js)
 - Sorting in the ranking table
-- Clicking in the ranking table
+- ~~Clicking in the ranking table~~
 - Autocomplete in submit game, boxes?
 - Enter in Search
 - Logout -> Home

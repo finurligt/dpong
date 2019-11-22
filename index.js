@@ -30,7 +30,8 @@ function fillTable(data) {
   const tableBody = document.getElementById('tableBody');
   let dataHtml = '';
   for (let i = 0; i < playerArray.length; i++) {
-    dataHtml += `<tr><td><a href="#">${i+1}</a></td><td><a href="#">${playerArray[i][0]}</a></td><td><a href="#">${playerArray[i][1]}</a></td></tr>`
+    var href = "profile.html?id=" + playerArray[i][0];
+    dataHtml += `<tr><td><a href="${href}">${i+1}</a></td><td><a href="${href}">${playerArray[i][0]}</a></td><td><a href="${href}">${playerArray[i][1]}</a></td></tr>`
   }
 
   tableBody.innerHTML = dataHtml;
