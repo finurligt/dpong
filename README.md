@@ -10,9 +10,9 @@
 - Sorting in the ranking table
 - ~~Clicking in the ranking table~~
 - Autocomplete in submit game, boxes?
-- Enter in Search
+- ~~Enter in Search~~
 - ~~Logout -> Login.html~~
-- Logo -> Home
+- ~~Logo -> Home~~
 - ~~Critical: Clean up navbar~~
 - ~~Critical: Cloud functions bad user input handling~~
 - ~~Critical: User feedback for login, register and submit~~
