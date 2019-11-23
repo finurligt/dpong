@@ -11,7 +11,7 @@
 - ~~Clicking in the ranking table~~
 - Autocomplete in submit game, boxes?
 - Enter in Search
-- Logout -> Home
+- ~~Logout -> Login.html~~
 - Logo -> Home
 - ~~Critical: Clean up navbar~~
 - ~~Critical: Cloud functions bad user input handling~~

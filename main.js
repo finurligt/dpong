@@ -38,6 +38,7 @@ function logOut() {
   console.log("logging out")
   firebase.auth().signOut().then(function() {
     // Sign-out successful.
+    window.location.href = "login.html";
   }, function(error) {
     console.log("Error while signing out.")
     console.log(error)
