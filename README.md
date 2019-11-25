@@ -3,13 +3,15 @@
 ###### TODO:
 
 - Critical, backend: Fix access rules
-- Clientside bad input handling (or should I?)
+- Make complete match history page
+- Change submit game redirection. Maybe to player profile? or complete match history?
 - Backend: Refactor cloud functions (again). Transaction is simply too slow. (maybe)
 - Backend, refactor: Connect uid to username and check if user is in game at submitGame()
 - Look at caching players locally to save downloaded data (currently loading from main.js)
 - Sorting in the ranking table
+- ~~Clientside bad input handling (or should I?)~~
 - ~~Clicking in the ranking table~~
-- Autocomplete in submit game, boxes?
+- ~~Autocomplete in submit game, boxes?~~
 - ~~Enter in Search~~
 - ~~Logout -> Login.html~~
 - ~~Logo -> Home~~
