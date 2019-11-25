@@ -2,16 +2,19 @@ var submitGame = firebase.functions().httpsCallable('submitGame');
 
 document.getElementById('submit-li').classList.add("active");
 
-var winnersToSubmit = [];
-var losersToSubmit = [];
+var winnersToSubmit = new Set();
+var losersToSubmit = new Set();
 
 function submitButton() {
   /**
   Use this function to submit a game. If more fields are needed just add them
   and I will fix backend later.
   **/
-  var winnersArray = document.getElementById('winners').value.replace(' ','').split(',');
-  var loserArray = document.getElementById('losers').value.replace(' ','').split(',');
+  var winnersArray = Array.from(winnersToSubmit);
+  var loserArray = Array.from(losersToSubmit);
+  console.log("Submitting game");
+  console.log(winnersArray);
+  console.log(loserArray);
   submitGame({
     winners: winnersArray,
     losers: loserArray
@@ -32,21 +35,51 @@ playersRef.once('value').then(function(snapshot) {
   playersArray.forEach(function(player) {
     autocompleteArray.push(player.name);
   });
-  autocomplete(document.getElementById('winners'),autocompleteArray);
-  autocomplete(document.getElementById('losers'),autocompleteArray);
+  autocompleteGame(document.getElementById('winners'),autocompleteArray);
+  autocompleteGame(document.getElementById('losers'),autocompleteArray);
 })
 
 function submitWinner(winner) {
-  winnersToSubmit.push(winner);
-  console.log(winnersToSubmit);
+  winnersToSubmit.add(winner);
+  var playerbox = document.createElement('h4');
+  playerbox.classList.add("player-box");
+  playerbox.innerHTML=winner;
+  var closeButton = document.createElement("button");
+  closeButton.classList.add("close");
+  closeButton.type="close";
+  closeButton.setAttribute('aria-label', 'Close');
+  closeButton.innerHTML= '<span aria-hidden="true">&times;</span>';
+  closeButton.addEventListener("click", function(e) {
+    console.log("hello");
+    this.parentNode.style.display="none";
+    winnersToSubmit.delete(winner);
+  });
+  playerbox.appendChild(closeButton);
+  document.getElementById("winners-box-container").appendChild(playerbox);
 }
 
 function submitLoser(loser) {
-  losersToSubmit.push(loser);
-  console.log(losersToSubmit);
+  if (!losersToSubmit.has(loser)&&(!winnersToSubmit.has(loser))) {
+    losersToSubmit.add(loser);
+    var playerbox = document.createElement('h4');
+    playerbox.classList.add("player-box");
+    playerbox.innerHTML=loser;
+    var closeButton = document.createElement("button");
+    closeButton.classList.add("close");
+    closeButton.type="close";
+    closeButton.setAttribute('aria-label', 'Close');
+    closeButton.innerHTML= '<span aria-hidden="true">&times;</span>';
+    closeButton.addEventListener("click", function(e) {
+      console.log("hello");
+      this.parentNode.style.display="none";
+      losersToSubmit.delete(loser);
+    });
+    playerbox.appendChild(closeButton);
+    document.getElementById("losers-box-container").appendChild(playerbox);
+  }
 }
 
-function autocomplete(inp, arr) {
+function autocompleteGame(inp, arr) {
   /*the autocomplete function takes two arguments,
   the text field element and an array of possible autocompleted values:*/
   var currentFocus;
@@ -77,7 +110,8 @@ function autocomplete(inp, arr) {
           /*execute a function when someone clicks on the item value (DIV element):*/
           b.addEventListener("click", function(e) {
             /*insert the value for the autocomplete text field:*/
-            inp.value = this.getElementsByTagName("input")[0].value;
+            //inp.value = this.getElementsByTagName("input")[0].value;
+            inp.value="";
             if(inp==document.getElementById("winners")) {
               submitWinner(this.getElementsByTagName("input")[0].value);
             } else if (inp==document.getElementById("losers")) {
@@ -100,13 +134,13 @@ function autocomplete(inp, arr) {
         increase the currentFocus variable:*/
         currentFocus++;
         /*and and make the current item more visible:*/
-        addActive(x);
+        gameAddActive(x);
       } else if (e.keyCode == 38) { //up
         /*If the arrow UP key is pressed,
         decrease the currentFocus variable:*/
         currentFocus--;
         /*and and make the current item more visible:*/
-        addActive(x);
+        gameAddActive(x);
       } else if (e.keyCode == 13) {
         /*If the ENTER key is pressed, prevent the form from being submitted,*/
         e.preventDefault();
@@ -116,7 +150,7 @@ function autocomplete(inp, arr) {
         }
       }
   });
-  function addActive(x) {
+  function gameAddActive(x) {
     /*a function to classify an item as "active":*/
     if (!x) return false;
     /*start by removing the "active" class on all items:*/

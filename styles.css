@@ -121,6 +121,20 @@ input[type=submit] {
   border: 2px solid #222;
   display: inline-block;
   padding: 3px;
+  padding-bottom: 2px;
   border-radius: 6px;
   color: #222;
+  margin: 0;
+  margin-top: 4px;
+  margin-right: 4px;
+}
+
+#bootstrap-overrides .autocomplete-container {
+  position: relative;
+  margin-bottom: 3px;
+}
+
+.close {
+  margin-left: 3px;
+  margin-right: 3px;
 }
