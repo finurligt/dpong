@@ -20,7 +20,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">D-Pong</a>
+          <a class="navbar-brand" href="index.html">D-Pong</a>
         </div>
 
         <div class="collapse navbar-collapse" id="myNavbar">
@@ -57,12 +57,21 @@
     </nav>
 
 
+
     <div class="col-sm-4 col-sm-offset-4">
       <h2 class="text-center">Submit game</h2>
       <h3>Winners</h3>
-      <input id="winners" class="form-control" type="text" placeholder="Winners">
+      <div class="autocomplete-container">
+        <input id="winners" class="form-control submit-input" type="text" placeholder="Winners">
+      </div>
+
+
+      <div id="winners-box-container"></div>
       <h3>Losers</h3>
-      <input id="losers" class="form-control" type="text" placeholder="Losers">
+      <div class="autocomplete-container">
+        <input id="losers" class="form-control" type="text" placeholder="Losers">
+      </div>
+      <div id="losers-box-container"></div>
       <button onclick="submitButton()" id="submit-game-button" type="submit" class="btn btn-default">Submit</button>
       <h5 id="submit-game-description">Players can be separated with a comma. Example: "Player1, player2"</h5>
     </div>
