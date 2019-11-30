@@ -9,6 +9,8 @@
 - Backend, refactor: Connect uid to username and check if user is in game at submitGame()
 - Look at caching players locally to save downloaded data (currently loading from main.js)
 - Sorting in the ranking table
+- Make progressive web app
+- Create test environment (necessary once app goes live)
 - ~~Clientside bad input handling (or should I?)~~
 - ~~Clicking in the ranking table~~
 - ~~Autocomplete in submit game, boxes?~~
