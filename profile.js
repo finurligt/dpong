@@ -10,7 +10,7 @@ firebase.database().ref('/players/').once('value').then(function(snapshot) {
       if (user) {
         // User is signed in.
         id=user.displayName;
-        document.getElementById('pofile-li').classList.add("active");
+        document.getElementById('profile-li').classList.add("active");
       }
       setUpProfile(snapshot);
     });

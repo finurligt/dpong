@@ -20,7 +20,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.html">D-Pong</a>
+          <a id="logo" class="navbar-brand" href="index.html">D-Pong</a>
         </div>
 
         <div class="collapse navbar-collapse" id="myNavbar">
@@ -56,42 +56,39 @@
             <li id="login-li"><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
           </ul>
           <ul id="nav-logout-ul" class="nav navbar-nav navbar-right">
-            <li id="profile-li"><a href="profile.html?id="><span class="glyphicon glyphicon-user"></span> Profile</a></li>
+            <li id="pofile-li"><a href="profile.html?id="><span class="glyphicon glyphicon-user"></span> Profile</a></li>
             <li><a id="logout-a" onclick="logOut()"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
           </ul>
         </div>
       </div>
     </nav>
 
-    <div class="col-sm-6 col-sm-offset-3" id="profile">
-      <h1 id="name" class="text-center">Player</h1>
-      <div class="col-xs-6">
-        <h2 id="rank" class="text-center">12</h2>
-        <h3 class="text-center">Rank</h3>
-      </div>
-      <div id="rating-div" class="col-xs-6">
-        <h2 id="rating" class="text-center">1612</h2>
-        <h3 class="text-center">Points</h3>
-      </div>
-
-      <table class="table table-striped table-dark" id="game-table">
-        <thead class="thead-dark">
-          <tr>
-            <th scope="col">Winners</th>
-            <th scope="col">Losers</th>
-            <th scope="col">Points</th>
-            <th scope="col">Date</th>
-          </tr>
-        </thead>
-        <tbody id="tableBody">
-
-        </tbody>
-      </table>
-    </div>
-
-    <div id="user-not-found">
+    <!--div class="welcome">
       <div class="col-sm-6 col-sm-offset-3">
-        <h3 class="text-center">User not found</h3>
+        <div class="welcome-message-container">
+          <h2>Welcome</h2>
+          <h4>This is a web application for keeping track of your beer pong.</h4>
+        </div>
+      </div>
+    </div-->
+
+    <div class="col-sm-6 col-sm-offset-3">
+      <div class="welcome-message">
+        <h2>Welcome</h2>
+        <h4>This is a web application for keeping track of your beer pong games. Here are the latest news and updates.</h4>
+      </div>
+      <div id="newsfeed">
+        <div class="news-post">
+          <h2>This weeks updates</h2>
+          <h4></h4>
+          <h4>2019-12-01</h4>
+        </div>
+
+        <div class="news-post">
+          <h2>Some other updates</h2>
+          <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </h4>
+          <h4>2019-11-01</h4>
+        </div>
       </div>
     </div>
 
@@ -105,7 +102,7 @@
     <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
 
     <!-- TODO: Add SDKs for Firebase products that you want to use
-         https://firebase.google.com/docs/web/setup#available-libraries -->
+    https://firebase.google.com/docs/web/setup#available-libraries -->
 
     <script>
       // Your web app's Firebase configuration
@@ -125,6 +122,8 @@
     <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-auth.js"></script>
 
     <script src="main.js"></script>
-    <script src="profile.js"></script>
+    <script src="news.js"></script>
+
+
   </body>
 </html>
