@@ -107,6 +107,14 @@ input[type=submit] {
   display: none;
 }
 
+/* Make the navbar tighter when screensize gets low */
+@media (min-width:768px) and (max-width:900px) {
+  #bootstrap-overrides ul.nav.navbar-nav a {
+      padding-left: 7px;
+      padding-right: 7px;
+  }
+}
+
 @media (max-width:767px) {
   #profile{
     border:0px solid !important

@@ -1,5 +1,5 @@
 function config() {
-  document.getElementById('index-li').classList.add("active");
+  document.getElementById('listings-li').classList.add("active");
   var playersRef = firebase.database().ref('players')
   playersRef.on('value',gotData, gotErr)
 }
