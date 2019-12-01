@@ -73,7 +73,13 @@ function fillTable(data) {
   const tableBody = document.getElementById('tableBody');
   let dataHtml = '';
   gamesArray.forEach(function(child) {
-    dataHtml += `<tr><td><a href="#">${child.winners.join(", ")}</a></td><td><a href="#">${child.losers.join(", ")}</a></td><td><a href="#">${child.rating}</a></td><td><a href="#">${formatDate(new Date(child.timestamp))}</a></td></tr>`
+    if (child.winners.includes(id)) {
+      //player is winner in this game
+      console.log("this happened");
+      dataHtml += `<tr class="winner-game"><td><a href="#">${child.winners.join(", ")}</a></td><td><a href="#">${child.losers.join(", ")}</a></td><td><a href="#">${child.rating}</a></td><td><a href="#">${formatDate(new Date(child.timestamp))}</a></td></tr>`
+    } else {
+      dataHtml += `<tr class="loser-game"><td><a href="#">${child.winners.join(", ")}</a></td><td><a href="#">${child.losers.join(", ")}</a></td><td><a href="#">${child.rating}</a></td><td><a href="#">${formatDate(new Date(child.timestamp))}</a></td></tr>`
+    }
   });
 
   tableBody.innerHTML = dataHtml;

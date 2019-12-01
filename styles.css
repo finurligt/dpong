@@ -142,3 +142,11 @@ input[type=submit] {
   margin-left: 3px;
   margin-right: 3px;
 }
+
+#bootstrap-overrides .winner-game {
+  background-color: #04F40033;
+}
+
+#bootstrap-overrides .loser-game {
+  background-color: #F4000033;
+}
