@@ -76,9 +76,9 @@ function fillTable(data) {
     if (child.winners.includes(id)) {
       //player is winner in this game
       console.log("this happened");
-      dataHtml += `<tr class="winner-game"><td><a href="#">${child.winners.join(", ")}</a></td><td><a href="#">${child.losers.join(", ")}</a></td><td><a href="#">${child.rating}</a></td><td><a href="#">${formatDate(new Date(child.timestamp))}</a></td></tr>`
+      dataHtml += `<tr class="winner-game"><td><a href="profile.html?id=${child.winners[0]}">${child.winners.join(", ")}</a></td><td><a href="profile.html?id=${child.losers[0]}">${child.losers.join(", ")}</a></td><td><a href="#">${child.rating}</a></td><td><a href="#">${formatDate(new Date(child.timestamp))}</a></td></tr>`
     } else {
-      dataHtml += `<tr class="loser-game"><td><a href="#">${child.winners.join(", ")}</a></td><td><a href="#">${child.losers.join(", ")}</a></td><td><a href="#">${child.rating}</a></td><td><a href="#">${formatDate(new Date(child.timestamp))}</a></td></tr>`
+      dataHtml += `<tr class="loser-game"><td><a href="profile.html?id=${child.winners[0]}">${child.winners.join(", ")}</a></td><td><a href="profile.html?id=${child.losers[0]}">${child.losers.join(", ")}</a></td><td><a href="#">${child.rating}</a></td><td><a href="#">${formatDate(new Date(child.timestamp))}</a></td></tr>`
     }
   });
 
