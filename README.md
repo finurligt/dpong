@@ -2,16 +2,17 @@
 
 ###### TODO:
 
-- ~~Critical, backend: Fix access rules~~
-- ~~Make complete match history page~~
-- Change submit game redirection. Maybe to player profile? or complete match history?
-- Backend: Refactor cloud functions (again). Transaction is simply too slow. (maybe)
+- Prevent double submission
 - Backend, refactor: Connect uid to username and check if user is in game at submitGame()
 - Look at caching players locally to save downloaded data (currently loading from main.js)
 - Sorting in the ranking table
 - Make progressive web app
 - Create test environment (necessary once app goes live)
 - Change some stuff to onDataChanged
+- ~~Critical, backend: Fix access rules~~
+- ~~Make complete match history page~~
+- ~~Change submit game redirection. Maybe to player profile? or complete match history?~~
+- ~~Backend: Refactor cloud functions (again). Transaction is simply too slow. (maybe)~~
 - ~~Clientside bad input handling (or should I?)~~
 - ~~Clicking in the ranking table~~
 - ~~Autocomplete in submit game, boxes?~~
